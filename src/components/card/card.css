@@ -1,0 +1,26 @@
+h1.criminal {
+    font-family: 'Bigelow Rules', cursive;
+    font-weight: 400;
+    font-size: 60px;
+    font-style: normal;
+    line-height: initial;
+    color: rgb(245, 115, 28)
+  
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #95dada;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 25px;
+    cursor: pointer;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+  }
+  
+  .card-container:hover {
+    transform: scale(1.05);
+  }

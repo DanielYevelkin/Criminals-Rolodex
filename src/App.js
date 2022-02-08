@@ -1,25 +1,50 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {CardList} from './components/cardlist/cardlist';
+import {SearchBox} from './components/searchbox/searchbox'
+
+
+class App extends Component {
+
+  constructor(){
+    super()
+
+    this.state = {
+      criminals: [],
+      searchField: ''
+    }
+  }
+
+  componentDidMount(){
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(data => data.json())
+    .then(criminals => this.setState({criminals}))
+  }
+
+  onSearchChange = event => {
+    this.setState({ searchField: event.target.value });
+  };
+
+
+
+  render(){
+
+    const {criminals, searchField} = this.state
+    const filteredCriminals = criminals.filter(criminal => 
+      criminal.name.toLowerCase().includes(searchField.toLowerCase()))
+
+    return (
+      <div className='App'>
+        <SearchBox onSearchChange={this.onSearchChange} />
+        <h1 className='bigalow'>Criminals in Your Area</h1>
+        <CardList criminals={filteredCriminals} />
+      </div>
+    )
+    
+  }
 }
+
+
 
 export default App;
