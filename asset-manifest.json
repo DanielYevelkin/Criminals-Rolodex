@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Criminals-Rolodex/static/css/main.bd136654.css",
+    "main.js": "/Criminals-Rolodex/static/js/main.c6b1238e.js",
+    "static/js/787.e4e9b7ff.chunk.js": "/Criminals-Rolodex/static/js/787.e4e9b7ff.chunk.js",
+    "index.html": "/Criminals-Rolodex/index.html",
+    "main.bd136654.css.map": "/Criminals-Rolodex/static/css/main.bd136654.css.map",
+    "main.c6b1238e.js.map": "/Criminals-Rolodex/static/js/main.c6b1238e.js.map",
+    "787.e4e9b7ff.chunk.js.map": "/Criminals-Rolodex/static/js/787.e4e9b7ff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd136654.css",
+    "static/js/main.c6b1238e.js"
+  ]
+}
